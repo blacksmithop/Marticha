@@ -1,9 +1,9 @@
 from telegram.ext import Updater
 from telegram.ext import CommandHandler
-from teleambu.commands.wiki import wiki_handler
-from teleambu.commands.youtube import youtube_handler
-from teleambu.commands.urban import urban_handler
-from teleambu.commands.movie import movie_handler
+from commands.wiki import wiki_handler
+from commands.youtube import youtube_handler
+from commands.urban import urban_handler
+from commands.movie import movie_handler
 
 from os import getenv as e
 updater = Updater(token=e('telegram'), use_context=True)
