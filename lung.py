@@ -1,10 +1,10 @@
 from telegram.ext import Updater
 from telegram.ext import CommandHandler
-from teleambu.commands.wiki import wiki_handler
-from teleambu.commands.youtube import youtube_handler
-from teleambu.commands.urban import urban_handler
-
-updater = Updater(token='1295113065:AAH20oEn9_Wb6HvXErb2SRvMwxAQHPghyiY', use_context=True)
+from commands.wiki import wiki_handler
+from commands.youtube import youtube_handler
+from commands.urban import urban_handler
+from os import getenv as e
+updater = Updater(token=e('telegram'), use_context=True)
 dispatcher = updater.dispatcher
 
 
