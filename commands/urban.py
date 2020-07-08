@@ -2,6 +2,7 @@ from telegram.ext import CommandHandler
 from json import loads
 import urllib.request as req
 
+
 def ud(bot, update):
     if not update.args:
         msg = "Please specify a word to search Urban Dictionary\neg: /ud Yeet"
