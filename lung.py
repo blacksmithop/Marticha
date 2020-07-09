@@ -4,6 +4,7 @@ from commands.wiki import wiki_handler
 from commands.youtube import youtube_handler
 from commands.urban import urban_handler
 from commands.movie import movie_handler
+from commands.poll import poll_handler, dice_handler
 
 from os import getenv as e
 updater = Updater(token=e('telegram'), use_context=True)
@@ -15,7 +16,7 @@ def start(update, context):
 
 
 start_handler = CommandHandler('start', start)
-handlers = [start_handler, wiki_handler, youtube_handler, urban_handler, movie_handler]
+handlers = [start_handler, wiki_handler, youtube_handler, urban_handler, movie_handler, poll_handler, dice_handler]
 for h in handlers:
     dispatcher.add_handler(h)
 
